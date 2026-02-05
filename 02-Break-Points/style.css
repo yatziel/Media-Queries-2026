@@ -1,0 +1,114 @@
+/* 
+
+  BREAK POINTS (Puntos de Quiebre)
+
+  Valores especifios de ancho de pantalla donde cambia el diseño del sitio web para adapatarse mejor a las dimensiones del dispositivo.
+
+  Ayuda a definir los estilos mediante los media queries. Generalmente se definen según las categorías comunes de dispositivos.
+
+  Básandonos en dispositivos:
+
+    Móviles pequeños 👉 de 320px a 479px de ancho de pantalla.
+    Móviles 👉 de 480px a 767px de ancho de pantalla.
+    Tabletas 👉 de 768px a 1023px de ancho de pantalla.
+    Laptops 👉 de 1024px a 1279px de ancho de patanlla.
+    Escritorio 👉 1280px a tamaños superiores.
+  
+    Recomendaciones
+
+      1. Usar solo los brake points necesarios, generalmente de 3 a 5 para mantener un código manejable.
+      2. Los Media Queries escribirlos al final del código css base.
+
+  Metodologías de Diseño Responsivo:
+
+    1. Mobile First (Primero Móviles). Primero se diseñan y establecen los estilos base para pantallas pequeñas. Se usan los media queries con "min-width" para ir apliando hacia tamaños más grandes de pantalla.
+
+    2. Desktop First (Primero Escritorio). Primero se diseña y establecen los estilos base para pantallas grandes. Se usan los media queries con "max-width" para ir reduciendo hacia tamaños más pequeños de pantalla.
+
+*/
+
+/* Mobile First - Break Points */
+
+/* Establecemos los estilos base para móviles pequeños de hasta 479px de ancho */
+
+body {
+  background-color: blue;
+}
+
+/* Estilos para móviles entre 480px y 767px */
+
+@media screen and (min-width:480px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* Estilos para tabletas entre 768px y 1023px */
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/* Estilos para laptops entre 1024px y 1279px */
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: pink;
+  }
+}
+
+/* Estilos para escritorio de 1280px para arriba */
+
+@media screen and (min-width: 1280px) {
+  body {
+    background-color: purple;
+  }
+}
+
+
+/* Desktop First - Breake Points */
+
+/* Definir los estilos base para pantallas de escritorio de 1280px y superiores */
+
+h1 {
+  font-size: 8rem;
+  color: white;
+}
+
+/* Estilos de laptop entre 1024px a 1279px */
+
+@media screen and (max-width: 1279px) {
+  h1 {
+    font-size: 6rem;
+    color: black;
+  }
+}
+
+/* Estilos de tabletas entre 768px a 1023px */
+
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 4rem;
+    color: brown;
+  }
+}
+
+/* Estilos de móviles entre 480px a 767px */
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+/* Estilos de móviles peques 479px para abajo */
+
+@media screen and (max-width: 479px) {
+  h1 {
+    font-size: .5rem;
+    color: black;
+  }
+}
